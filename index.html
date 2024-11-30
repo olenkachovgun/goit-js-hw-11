@@ -2,19 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-11/favicon.svg" />
+    <link href="/goit-js-hw-11/assets/favicon-DjIkfav9.ico" rel="icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-CMPI-9IO.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-5ObWk2rO.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-C18yBvv9.css">
   </head>
   <body>
     <main>
       <h2>Пошук зображень</h2>
       <form action="" class="form">
-        <input type="text" placeholder="Search images..." />
+        <input
+          type="text"
+          name="search"
+          placeholder="Search images..."
+          required
+        />
         <button type="submit" class="btn">Search</button>
       </form>
+      <div class="loading-message" style="display: none">
+        Loading images, please wait...
+      </div>
+      <ul class="gallery"></ul>
     </main>
 
   </body>
