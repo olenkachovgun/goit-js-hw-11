@@ -51,7 +51,16 @@ function searchImages() {
     })
     .catch(error => {
       hideLoadingMessage(loadingMessage);
-      console.log(error);
+      console.log(error.message);
+      iziToast.show({
+        title: 'Error',
+        iconUrl: `${errorImage}`,
+        message: 'The link provided is incorrect.',
+        messageColor: 'white',
+        messageSize: '18px',
+        backgroundColor: 'red',
+        position: 'topRight',
+      });
     })
     .finally(() => {
       setTimeout(() => {
